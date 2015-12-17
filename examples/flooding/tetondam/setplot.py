@@ -127,7 +127,7 @@ def setplot(plotdata):
     plotitem.amr_contour_show = [1]
     plotitem.celledges_show = 0
     plotitem.patchedges_show = 0
-    plotitem.show = False
+    plotitem.show = True
 
 
     def addgauges(current_data):
