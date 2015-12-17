@@ -14,7 +14,7 @@ subroutine qinit(meqn,mbc,mx,my,xlower,ylower,dx,dy,q,maux,aux)
     ! Parameters for problem
     real(kind=8), parameter :: a = 1.d0
     real(kind=8), parameter :: sigma = 0.5d0
-    real(kind=8), parameter :: h0 = 120.d0
+    real(kind=8), parameter :: h0 = 137.d0
 
     ! Other storage
     integer :: i,j
@@ -25,7 +25,7 @@ subroutine qinit(meqn,mbc,mx,my,xlower,ylower,dx,dy,q,maux,aux)
         x = xlower + (i - 0.5d0)*dx
         do j=1-mbc,my+mbc
            y = ylower + (j - 0.5d0) * dx
-           IF (x .GT. 11689) THEN
+           IF (x .GT. 33000) THEN
               q(1,i,j) =  MAX(0.d0,eta - aux(1,i,j))
            ELSE
               q(1,i,j) = 0
